@@ -13,8 +13,9 @@ yarn hardhat compile (compiles all files from contracts folder)
 
 Running:
 yarn hardhat run scripts/deploy.js
-yarn hardhat run scripts/deploy.js --network hardhat ///// run locally, can be without --network part
+yarn hardhat run scripts/deploy.js --network hardhat ///// run locally on hardhat network
 yarn hardhat run scripts/deploy.js --network sepolia ///// run on sepolia - defined in hardhat.config.js
+yarn hardhat run scripts/deploy.js --network localhost ///// defined to use local hardhat
 
 
 
