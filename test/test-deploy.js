@@ -10,7 +10,7 @@ describe("SimpleStorage", function () {
   simpleStorage = await simpleStorageFactory.deploy()
  })
 
- it("Should start with a favoutire number of 0", async function () {
+ it("Should start with a favourite number of 0", async function () {
   const currentValue = await simpleStorage.retrieve()
   const expectedValue = "0"
   assert.equal(currentValue.toString(), expectedValue)
@@ -19,7 +19,7 @@ describe("SimpleStorage", function () {
  it("Should update favourite number when we call store", async function () {
   const newValue = "7"
   const transactionResponse = await simpleStorage.store(newValue)
-  await transactionResponse.await(1)
+  await transactionResponse.wait(1)
   const actualValue = await simpleStorage.retrieve()
   assert.equal(actualValue.toString(), newValue)
  })
