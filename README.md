@@ -1,6 +1,6 @@
 # Lesson 6 HardHat Simple Storage
 
-Commands:
+Commands needed by project:
 yarn add --dev hardhat
 yarn hardhat init
 yarn add --dev prettier 
@@ -8,6 +8,7 @@ yarn add --dev prettier-plugin-solidity
 yarn add --dev dotenv
 yarn add --dev @nomiclabs/hardhat-etherscan
 yarn add hardhat-gas-reporter
+yarn add --dev solidity-coverage
 
 Compile:
 yarn hardhat compile (compiles all files from contracts folder)
