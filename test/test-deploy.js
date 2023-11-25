@@ -23,4 +23,17 @@ describe("SimpleStorage", function () {
   const actualValue = await simpleStorage.retrieve()
   assert.equal(actualValue.toString(), newValue)
  })
+
+ it("Should add person when addPerson is called", async function () {
+  const personName = "Kowalski Skipper"
+  const favouriteNumber = "7"
+  const transactionResponse = await simpleStorage.addPerson(
+   personName,
+   favouriteNumber,
+  )
+  await transactionResponse.wait(1)
+  const person = await simpleStorage.people(0)
+  assert.equal(person.favoriteNumber.toString(), favouriteNumber)
+  assert.equal(person.name, personName)
+ })
 })
