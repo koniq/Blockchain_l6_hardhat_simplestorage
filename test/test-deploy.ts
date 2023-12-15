@@ -1,5 +1,5 @@
-const { ethers } = require("hardhat")
-const { expect, assert } = require("chai")
+import { ethers } from "hardhat"
+import { expect, assert } from "chai"
 
 describe("SimpleStorage", function () {
  let simpleStorage
